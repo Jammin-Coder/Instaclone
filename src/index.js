@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar/Nav';
+import Profile from './Profile/Profile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,12 +12,9 @@ root.render(
     <BrowserRouter>
       
       <Navbar/> {/* Render navbar on all pages */}
-
       <Routes>
-        
-        <Route path='/' element={ <h1>Home</h1> }/>
-        <Route path='/profile' element={ <h1>Profile</h1> }/>
-
+          <Route path='/' element={ <h1>Home</h1> }/>
+          <Route path='/profile' element={ <Profile/> }/>
       </Routes>
     </BrowserRouter>
     

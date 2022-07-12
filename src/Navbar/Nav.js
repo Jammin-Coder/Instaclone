@@ -1,7 +1,7 @@
 import './Navbar.css';
 import Search from '../Inputs/Search';
 import { Home, Message, New } from '../NavLogos';
-import ProfilePic from '../Profile/ProfilePic';
+import { ProfilePic } from '../Profile/Profile';
 
 
 export default function Navbar(props) {
@@ -20,7 +20,7 @@ export default function Navbar(props) {
                     <Home/>
                     <Message/>
                     <New/>
-                    <ProfilePic width='32px'/>
+                    <ProfilePic src='/img/prof_pic3.jpg' width='32px'/>
                 </div>
             </div>
         </div>

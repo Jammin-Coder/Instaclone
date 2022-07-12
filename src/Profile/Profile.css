@@ -1,0 +1,73 @@
+.ProfileHeader {
+    display: grid;
+    grid-template-columns: 30% 60%;
+    grid-template-areas: 'profile-pic profile-bio';
+    gap: 3em;
+    padding: 0 5rem;
+}
+
+
+.ProfilePic__img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+
+.ProfileBio__header {
+    display: flex;
+    gap: 1em;
+}
+
+.ProfileBio__stats {
+    display: flex;
+    gap: 1em;
+    margin: 2em 0;
+}
+
+.ProfileBio__stats a, .ProfileBio__main a {
+    text-decoration: none;
+}
+
+.ProfileBio__main a {
+    color: rgb(39, 129, 255);
+    font-weight: 600;
+}
+
+.ProfileBio__name {
+    font-weight: 700;
+    margin: 0.5em 0;
+}
+
+
+.ProfileBio__edit {
+    width: 5rem;
+    background-color: transparent;
+    border-radius: 0.2em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+.ProfileNav {
+    margin: 1em 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    height: 3rem;
+}
+
+.ProfileNav__options {
+    display: flex;
+    gap: 2em;
+}
+
+*[class*='ProfileNav__options__option'] {
+    display: grid;
+    place-content: center;
+    height: 2em;
+    padding: 1em;
+}
+
+.ProfileNav__options__option--active {
+    border-top: 1px solid black;
+}
