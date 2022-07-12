@@ -3,11 +3,23 @@
     width: 10rem;
 }
 
-.Search input {
+.Search__input {
+    position: relative;
     height: 100%;
     width: 100%;
     border-radius: 0.3em;
     background-color: rgb(239, 239, 239);
     border: none;
     padding: 0 1em;
+    font-size: 1em;
+}
+
+.Search__input::before {
+    display: inline-block;
+    content: 'BLAH';
+
+    background-repeat: no-repeat;
+    background-image: url('http://localhost:3000/img/search.svg');
+    width: 20px;
+    height: 20px;
 }

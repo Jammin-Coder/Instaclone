@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
 import './Navbar.css';
 import Search from '../Inputs/Search';
-import { HomeLogo } from '../Logos';
+import { Home, Message, New } from '../NavLogos';
+import ProfilePic from '../Profile/ProfilePic';
 
 
 export default function Navbar(props) {
@@ -17,7 +17,10 @@ export default function Navbar(props) {
                 </div>
 
                 <div className='Navbar__content__actions'>
-                    <HomeLogo size={64}/>
+                    <Home/>
+                    <Message/>
+                    <New/>
+                    <ProfilePic width='32px'/>
                 </div>
             </div>
         </div>

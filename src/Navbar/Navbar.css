@@ -12,7 +12,7 @@
     width: 40em;
     display: grid;
     place-items: center;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 40% 30% 30%;
     grid-template-areas: 'brand search actions';
 }
 
@@ -20,11 +20,15 @@
     width: 100%;
 }
 
+.Navbar__link {
+    width: min-content;
+}
+
 .Navbar__content__brand {
     grid-area: brand;
     font-family: 'Dancing Script', cursive;
-    font-weight: 500;
-    font-size: 2rem;
+    font-weight: 600;
+    font-size: 1.8rem;
 }
 
 .Navbar__content__search {
@@ -35,5 +39,10 @@
 
 
 .Navbar__content__actions {
+    width: 100%;
     padding: 0 1em;
+    display: grid;
+    grid-template-columns: repeat(6, calc(100% / 6));
+    place-items: center;
+    gap: 1em;
 }
