@@ -7,4 +7,16 @@
     .btn {
         @apply [white-space:nowrap] rounded-sm border px-1 hover:bg-gray-100;
     }
+
+    .btn--danger {
+        @apply btn bg-red-600 text-white hover:bg-red-700;
+    }
+
+    .profile-section-link {
+        @apply py-2 px-1 text-gray-500
+    }
+
+    .profile-section-link--active {
+        @apply profile-section-link border-t border-t-black text-black
+    }
 }
