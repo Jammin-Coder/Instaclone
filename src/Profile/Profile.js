@@ -1,3 +1,5 @@
+import { Outlet, useLocation } from 'react-router-dom';
+
 export function ProfilePic(props) {
     let source;
     let width;
@@ -53,10 +55,12 @@ export function ProfileHeader(props) {
 }
 
 export function ProfileSectionLink(props) {
-    let className = 'profile-section-link'
-    props.active ? className += '--active': className = className;
+    const location = useLocation();
+    let style;
+
+    if (props.href == location.pathname) style = {borderTop: '1px solid black', color: 'black'}
     return (
-        <a className={ className } href={ props.href }>
+        <a className='profile-section-link' style={ style } href={ props.href }>
             { props.children }
         </a>
     );
@@ -66,9 +70,9 @@ export function ProfileNav(props) {
     return (
         <div className='ProfileNav flex justify-center mb-10 border-t border-t-gray-200'>
             <div className='flex gap-4'>
-                <ProfileSectionLink href='#' active={ true }>Posts</ProfileSectionLink>
-                <ProfileSectionLink href='#'>Saved</ProfileSectionLink>
-                <ProfileSectionLink href='#'>Tagged</ProfileSectionLink>
+                <ProfileSectionLink href='/posts'>Posts</ProfileSectionLink>
+                <ProfileSectionLink href='/saved'>Saved</ProfileSectionLink>
+                <ProfileSectionLink href='/tagged'>Tagged</ProfileSectionLink>
             </div>
         </div>
     );
@@ -88,14 +92,37 @@ export function Posts(props) {
 
 
 
-export default function Profile(props) {
+export function Profile(props) {
     return (
-        <div className='page-wrapper'>
-            <div className='Profile'>
-                <ProfileHeader />
-                <ProfileNav/>
-                <Posts/>
-            </div>
+        <div className='Profile page-wrapper'>
+            <ProfileHeader />
+            <ProfileNav/>
+            { props.children }
+            <Outlet/>
         </div>
+    );
+}
+
+export function SavedPage(props) {
+    return (
+        <Profile>
+            SAVES!
+        </Profile>
+    );
+}
+
+export function PostsPage(props) {
+    return (
+        <Profile>
+            <Posts/>
+        </Profile>
+    );
+}
+
+export function TaggedPage(props) {
+    return (
+        <Profile>
+            No tags
+        </Profile>
     );
 }
