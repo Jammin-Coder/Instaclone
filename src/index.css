@@ -8,7 +8,7 @@
 }
 
 html {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 body {
@@ -48,5 +48,5 @@ code {
 }
 
 .page-wrapper > * {
-  width: clamp(0%, 100%, 45rem);
+  width: clamp(0%, 100%, 50rem);
 }

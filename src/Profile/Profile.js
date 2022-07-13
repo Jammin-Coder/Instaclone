@@ -44,12 +44,10 @@ export function ProfileBio(props) {
 export function ProfileHeader(props) {
     return (
         <div className='ProfileHeader mb-5'>
-            <div className='grid grid-cols-1 place-items-center md:grid-cols-2'>
-                <ProfilePic className='md:mb-16 md:mr-16' src='/img/prof_pic3.jpg' width='188px' />
+            <div className='grid place-items-center md:[grid-template-columns:30%_70%] gap-5'>
+                <ProfilePic className='md:ml-5' src='/img/prof_pic3.jpg' width='188px' />
                 <ProfileBio/>
             </div>
-            
-            
         </div>
     );
 }
