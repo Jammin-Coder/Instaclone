@@ -93,10 +93,13 @@ export function Posts(props) {
 export function Profile(props) {
     return (
         <div className='Profile page-wrapper'>
-            <ProfileHeader />
-            <ProfileNav/>
-            { props.children }
-            <Outlet/>
+            <div className='page-content'>
+                <ProfileHeader />
+                <ProfileNav/>
+                { props.children }
+                <Outlet/>
+            </div>
+            
         </div>
     );
 }

@@ -4,7 +4,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar/Nav';
-import { Profile, PostsPage, SavedPage, TaggedPage } from './Profile/Profile';
+import { PostsPage, SavedPage, TaggedPage } from './Profile/Profile';
+import { HomePage } from './Home/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +14,7 @@ root.render(
       
       <Navbar/> {/* Render navbar on all pages */}
       <Routes>
-          <Route path='/' element={ <h1>Home</h1> }/>
+          <Route path='/' element={ <HomePage/> }/>
           <Route path='/posts' element={ <PostsPage /> }/>
           <Route path='/saved' element={ <SavedPage /> } />
           <Route path='/tagged' element={ <TaggedPage /> } />

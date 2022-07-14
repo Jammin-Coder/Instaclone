@@ -8,7 +8,7 @@ export function Message(props) {
     let size;
     props.size ? size = props.size + 'px': size = defaultSize;
     return <a className='Navbar__link' href='/messages'>
-        <img src={message} style={{width: size, height: size }}/>
+        <img src={message} style={{width: size, height: size }} onClick={ props.onClick }/>
     </a>
 }
 
