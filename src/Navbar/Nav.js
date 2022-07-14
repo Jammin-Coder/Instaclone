@@ -20,7 +20,7 @@ export default function Navbar(props) {
                     <Home/>
                     <Message/>
                     <New/>
-                    <ProfilePic src='/img/prof_pic3.jpg' width='32px'/>
+                    <ProfilePic src='/img/profile/jammin_coder.jpg' width='32px'/>
                 </div>
             </div>
         </div>

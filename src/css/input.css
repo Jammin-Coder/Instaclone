@@ -15,4 +15,8 @@
     .profile-section-link {
         @apply py-2 px-1 text-gray-500
     }
+
+    .user-link {
+        @apply font-bold block hover:underline
+    }
 }

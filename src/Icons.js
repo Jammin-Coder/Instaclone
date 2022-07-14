@@ -8,6 +8,31 @@ export function Icon({ src, size}) {
 }
 
 
+export function FollowLink({ username }) {
+    const [isFollowing, setIsFollowing] = useState(false);
+    const [content, setContent] = useState('Follow');
+    const [styles, setStyles] = useState({});
+
+    function handleClick() {
+        if (!isFollowing) {
+            setIsFollowing(true);
+            setContent('Following')
+            setStyles({
+                padding: '0.2rem 0.4rem',
+                border: '1px solid gray'
+            });
+        }
+    }
+
+    let classList = 'w-[min-content] h-[min-content] grid place-items-center text-blue-500 font-bold rounded-md'
+
+    return (
+        <a style={{ ...styles }} className={classList} onClick={ handleClick }>
+            { content }
+        </a>
+    );
+}
+
 export function LikeButton(props) {
     const [isLiked, setLiked] = useState(false);
     const [source, setSource] = useState('/img/heart.png')

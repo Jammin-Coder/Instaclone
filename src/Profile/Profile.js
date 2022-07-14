@@ -1,26 +1,28 @@
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useLocation, useParams } from 'react-router-dom';
 
 export function ProfilePic(props) {
     let source;
     let width;
-    let classes;
 
-    props.className ? classes = `rounded-full ${props.className}`: classes = 'rounded-full';
     props.src ? source = props.src: source = '/img/nobody.png';
+
+    props.username ? source = `/img/profile/${props.username}.jpg`: source = source;
     props.width ? width = props.width: width = '100%';
 
     return (
         <div className='ProfilePic' style={{ width: width }}>
-            <img className={ classes } src={ source } alt={ props.alt }/>
+            <img className='rounded-full aspect-square' src={ source } alt={ props.alt } style={{ width: width }}/>
         </div>
     )
 }
 
 export function ProfileBio(props) {
+    let { username } = useParams();
+
     return (
         <div className='ProfileBio'>
             <div className='flex gap-5 [align-items:center] my-5 flex-wrap lg:flex-nowrap'>
-                <h2 className='text-3xl'>jammin_coder</h2>
+                <h2 className='text-3xl'> {username} </h2>
                 <button className='btn'>Edit profile</button>
                 <a className='flex underline' href='#settings'>Settings</a>
             </div>
@@ -32,7 +34,7 @@ export function ProfileBio(props) {
             </div>
 
             <div className='ProfileBio__main'>
-                <p className='font-bold'>Tim Batt</p>
+                <p className='font-bold'>{ username }</p>
                 I'm a young software developer and aspiring artist/designer.<br/>
                 <a className='text-blue-700 font-bold' href='https://timbattblog.com'>timbattblog.com</a>
             </div>
@@ -42,10 +44,13 @@ export function ProfileBio(props) {
 
 
 export function ProfileHeader(props) {
+    let { username } = useParams(); 
     return (
         <div className='ProfileHeader mb-5'>
-            <div className='grid place-items-center md:[grid-template-columns:30%_70%] gap-5'>
-                <ProfilePic className='md:ml-5' src='/img/prof_pic3.jpg' width='188px' />
+            <div className='grid place-items-center md:[grid-template-columns:30%_70%]'>
+                <div className='grid place-items-center w-[100%]'>
+                    <ProfilePic src='/img/profile/jammin_coder.jpg' width='188px' username={ username }/>
+                </div>
                 <ProfileBio/>
             </div>
         </div>
@@ -65,12 +70,13 @@ export function ProfileSectionLink(props) {
 }
 
 export function ProfileNav(props) {
+    let { username } = useParams(); 
     return (
         <div className='ProfileNav flex justify-center mb-10 border-t border-t-gray-200'>
             <div className='flex gap-4'>
-                <ProfileSectionLink href='/posts'>Posts</ProfileSectionLink>
-                <ProfileSectionLink href='/saved'>Saved</ProfileSectionLink>
-                <ProfileSectionLink href='/tagged'>Tagged</ProfileSectionLink>
+                <ProfileSectionLink href={`/${username}`}>Posts</ProfileSectionLink>
+                <ProfileSectionLink href={`/${username}/saved`}>Saved</ProfileSectionLink>
+                <ProfileSectionLink href={`/${username}/tagged`}>Tagged</ProfileSectionLink>
             </div>
         </div>
     );
@@ -91,11 +97,14 @@ export function Posts(props) {
 
 
 export function Profile(props) {
+    let { username } = useParams();
+
     return (
         <div className='Profile page-wrapper'>
             <div className='page-content'>
-                <ProfileHeader />
-                <ProfileNav/>
+                <ProfileHeader username={ username }/>
+                <ProfileNav />
+
                 { props.children }
                 <Outlet/>
             </div>
