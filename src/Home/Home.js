@@ -8,7 +8,7 @@ export function YourProfile({ username }) {
         <div className='grid place-content-center [grid-template-columns:20%_60%_20%] text-sm mb-5'>
             <ProfilePic width={48} src={ `https://jammincoder.github.io/Instaclone/img/profile/${ username }.jpg` }/>
             <div className='ml-2'>
-                <a className='user-link' href={ `/${ username }` }>{ username }</a>
+                <a className='user-link' href={ `${ username }` }>{ username }</a>
                 <small className='text-gray-600'>Tim Batt</small>
             </div>
             <a className='user-link grid place-items-center text-blue-500 font-bold' href='/switch_profile'>Switch</a>
@@ -101,13 +101,7 @@ export function PostPreview({ username }) {
 
                 <PostPreviewContent>
                     <Comment username={ username }>
-                        Notice the use of %PUBLIC_URL% in the tags above.
-                        It will be replaced with the URL of the `public` folder during the build.
-                        Only files inside the `public` folder can be referenced from the HTML.
-
-                        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-                        work correctly both with client-side routing and a non-root public URL.
-                        Learn how to configure a non-root public URL by running `npm run build`.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, inventore explicabo mollitia nemo rerum quod ipsum distinctio. Omnis, sit aut maxime voluptate sed neque quaerat fugiat blanditiis repudiandae quia magni.
                     </Comment>
                 </PostPreviewContent>
             </div>

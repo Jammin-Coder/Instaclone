@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar/Nav';
 import { PostsPage, SavedPage, TaggedPage } from './Profile/Profile';
 import { HomePage } from './Home/Home';
@@ -14,7 +14,7 @@ root.render(
       
       <Navbar/> {/* Render navbar on all pages */}
       <Routes>
-          <Route path='/' element={ <HomePage/> }/>
+          <Route exact path='' element={ <HomePage/> }/>
           <Route path=':username' element={ <PostsPage /> }/>
           <Route path=':username/saved' element={ <SavedPage /> } />
           <Route path=':username/tagged' element={ <TaggedPage /> } />
