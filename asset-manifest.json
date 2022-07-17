@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Instaclone/static/css/main.6f435a8a.css",
-    "main.js": "/Instaclone/static/js/main.96a7fec8.js",
+    "main.js": "/Instaclone/static/js/main.bac1980b.js",
     "static/js/787.c4e7f8f9.chunk.js": "/Instaclone/static/js/787.c4e7f8f9.chunk.js",
     "index.html": "/Instaclone/index.html",
     "main.6f435a8a.css.map": "/Instaclone/static/css/main.6f435a8a.css.map",
-    "main.96a7fec8.js.map": "/Instaclone/static/js/main.96a7fec8.js.map",
+    "main.bac1980b.js.map": "/Instaclone/static/js/main.bac1980b.js.map",
     "787.c4e7f8f9.chunk.js.map": "/Instaclone/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6f435a8a.css",
-    "static/js/main.96a7fec8.js"
+    "static/js/main.bac1980b.js"
   ]
 }
