@@ -10,7 +10,7 @@ import { HomePage } from './Home/Home';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/Instaclone'>
       
       <Navbar/> {/* Render navbar on all pages */}
       <Routes>
