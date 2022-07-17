@@ -4,9 +4,9 @@ export function ProfilePic(props) {
     let source;
     let width;
 
-    props.src ? source = props.src: source = '/img/nobody.png';
+    props.src ? source = props.src: source = 'https://jammincoder.github.io/Instaclone/img/nobody.png';
 
-    props.username ? source = `/img/profile/${props.username}.jpg`: source = source;
+    props.username ? source = `https://jammincoder.github.io/Instaclone/img/profile/${props.username}.jpg`: source = source;
     props.width ? width = props.width: width = '100%';
 
     return (
@@ -49,7 +49,7 @@ export function ProfileHeader(props) {
         <div className='ProfileHeader mb-5'>
             <div className='grid place-items-center md:[grid-template-columns:30%_70%]'>
                 <div className='grid place-items-center w-[100%]'>
-                    <ProfilePic src='/img/profile/jammin_coder.jpg' width='188px' username={ username }/>
+                    <ProfilePic src='https://jammincoder.github.io/Instaclone/img/profile/jammin_coder.jpg' width='188px' username={ username }/>
                 </div>
                 <ProfileBio/>
             </div>
@@ -86,10 +86,10 @@ export function ProfileNav(props) {
 export function Posts(props) {
     return (
         <div className='Posts grid grid-cols-3 gap-1'>
-            <img src='/img/posts/panda.png' className='aspect-square border border-gray-700'/>
-            <img src='/img/posts/panda.png' className='aspect-square border border-gray-700'/>
-            <img src='/img/posts/panda.png' className='aspect-square border border-gray-700'/>
-            <img src='/img/posts/panda.png' className='aspect-square border border-gray-700'/>
+            <img src='https://jammincoder.github.io/Instaclone/img/posts/panda.png' className='aspect-square border border-gray-700'/>
+            <img src='https://jammincoder.github.io/Instaclone/img/posts/panda.png' className='aspect-square border border-gray-700'/>
+            <img src='https://jammincoder.github.io/Instaclone/img/posts/panda.png' className='aspect-square border border-gray-700'/>
+            <img src='https://jammincoder.github.io/Instaclone/img/posts/panda.png' className='aspect-square border border-gray-700'/>
         </div>
     );
 }

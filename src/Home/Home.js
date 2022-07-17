@@ -6,7 +6,7 @@ import { useState } from 'react';
 export function YourProfile({ username }) {
     return (
         <div className='grid place-content-center [grid-template-columns:20%_60%_20%] text-sm mb-5'>
-            <ProfilePic width={48} src={ `/img/profile/${ username }.jpg` }/>
+            <ProfilePic width={48} src={ `https://jammincoder.github.io/Instaclone/img/profile/${ username }.jpg` }/>
             <div className='ml-2'>
                 <a className='user-link' href={ `/${ username }` }>{ username }</a>
                 <small className='text-gray-600'>Tim Batt</small>
@@ -19,7 +19,7 @@ export function YourProfile({ username }) {
 export function UserSuggestion({ username }) {
     return (
         <div className='my-3 grid place-content-center [grid-template-columns:20%_50%_30%] text-sm'>
-            <ProfilePic width='40px' src={ `/img/profile/${ username }.jpg` }/>
+            <ProfilePic width='40px' src={ `https://jammincoder.github.io/Instaclone/img/profile/${ username }.jpg` }/>
             <div className='place-content-start ml-2'>
                 <a className='user-link' href={ `/${ username }` }>{ username }</a>
                 <small className='text-gray-600'>Followed by...</small>
@@ -93,7 +93,7 @@ export function PostPreview({ username }) {
 
 
             <div className=''>
-                <img src='/img/posts/panda.png' className='aspect-square max-h-[30rem]'/>
+                <img src='https://jammincoder.github.io/Instaclone/img/posts/panda.png' className='aspect-square max-h-[30rem]'/>
             </div>
 
             <div className='mt-3 p-3'>

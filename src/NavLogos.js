@@ -1,4 +1,4 @@
-let dir = '/img/';
+let dir = 'https://jammincoder.github.io/Instaclone/img/';
 let message = dir + 'message.png';
 let home = dir + 'home.png';
 let newPost = dir + 'new.png';

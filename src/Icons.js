@@ -35,15 +35,15 @@ export function FollowLink({ username }) {
 
 export function LikeButton(props) {
     const [isLiked, setLiked] = useState(false);
-    const [source, setSource] = useState('/img/heart.png')
+    const [source, setSource] = useState('https://jammincoder.github.io/Instaclone/img/heart.png')
 
 
     function handleClick() {
         if (isLiked) {
-            setSource('/img/heart.png');
+            setSource('https://jammincoder.github.io/Instaclone/img/heart.png');
             setLiked(false)
         } else  {
-            setSource('/img/liked.png');
+            setSource('https://jammincoder.github.io/Instaclone/img/liked.png');
             setLiked(true);
         };
     }
@@ -59,7 +59,7 @@ export function LikeButton(props) {
 export function CommentButton(props) {
     return (
         <div className='w-[fit-content]'>
-            <Icon src='/img/comment.png'/>
+            <Icon src='https://jammincoder.github.io/Instaclone/img/comment.png'/>
         </div>
     );
 }
