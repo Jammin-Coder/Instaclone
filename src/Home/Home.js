@@ -84,18 +84,20 @@ export function PostPreviewContent(props) {
 
 export function PostPreview({ username, src }) {
     return (
-        <section className='grid place-content-center border rounded-md max-w-[30rem] mb-10 bg-white'>
-            <div className='p-3 flex [align-items:center] justify-between'>
-                <div className='flex [align-items:center] gap-2'>
-                    <ProfilePic width='32px' className='w-8' username={ username }/>
-                    <p className='text-sm'>{ username }</p>
+        <section className='grid place-content-center border border-t-0 rounded-md max-w-[30rem] mb-10 bg-white'>
+            <div className='px-3 py-2 flex [align-items:center] justify-between border-b border'>
+                <div className='flex [align-items:center] gap-3'>
+                    <ProfilePic width='32px'  username={ username }/>
+                    <Link className='text-sm hover:underline' to={`/${ username }`}>{ username }</Link>
                 </div>
             </div>
 
 
-            <div className=''>
-                <img src={ src } className='aspect-square max-h-[30rem]'/>
+            <div>
+                <img src={ src } className='aspect-square w-[100%] max-h-[30rem]'/>
             </div>
+            
+            
 
             <div className='mt-3 p-3'>
                 <PostInfo/>
