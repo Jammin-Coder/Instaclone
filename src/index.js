@@ -10,12 +10,12 @@ import { HomePage } from './Home/Home';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HashRouter basename='/Instaclone' hashType='slash'>
+    <HashRouter>
 
       <Navbar/> {/* Render navbar on all pages */}
 
       <Routes>
-          <Route path='' element={ <HomePage/> }/>
+          <Route path='/' element={ <HomePage/> }/>
           <Route path=':username' element={ <PostsPage /> }/>
           <Route path=':username/saved' element={ <SavedPage /> } />
           <Route path=':username/tagged' element={ <TaggedPage /> } />
