@@ -35,8 +35,9 @@ export function ProfileBio(props) {
 
             <div className='ProfileBio__main'>
                 <p className='font-bold'>{ username }</p>
-                I'm a young software developer and aspiring artist/designer.<br/>
-                <a className='text-blue-700 font-bold' href='https://timbattblog.com'>timbattblog.com</a>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Nesciunt, inventore explicabo mollitia nemo rerum quod ipsum distinctio.
+                Omnis, sit aut maxime voluptate sed neque quaerat fugiat blanditiis repudiandae quia magni.
             </div>
         </div>
     );
