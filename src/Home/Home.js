@@ -82,7 +82,7 @@ export function PostPreviewContent(props) {
     );
 }
 
-export function PostPreview({ username }) {
+export function PostPreview({ username, src }) {
     return (
         <section className='grid place-content-center border rounded-md max-w-[30rem] mb-10 bg-white'>
             <div className='p-3 flex [align-items:center] justify-between'>
@@ -94,7 +94,7 @@ export function PostPreview({ username }) {
 
 
             <div className=''>
-                <img src='https://jammincoder.github.io/Instaclone/img/posts/panda.png' className='aspect-square max-h-[30rem]'/>
+                <img src={ src } className='aspect-square max-h-[30rem]'/>
             </div>
 
             <div className='mt-3 p-3'>
@@ -131,9 +131,9 @@ export function HomePage(props) {
         <div className='page-wrapper'>
             <div className='page-content grid place-items-center md:place-items-start md:[grid-template-columns:50%_50%]'>
                 <div>
-                    <PostPreview username='jammin_coder'/>
-                    <PostPreview username='john_smith'/>
-                    <PostPreview username='jammin_coder'/>
+                    <PostPreview username='jammin_coder' src='https://jammincoder.github.io/Instaclone/img/posts/react.png'/>
+                    <PostPreview username='john_smith' src='https://jammincoder.github.io/Instaclone/img/posts/python.png'/>
+                    <PostPreview username='jammin_coder' src='https://jammincoder.github.io/Instaclone/img/posts/cpp.png'/>
                 </div>
 
                 <div>
