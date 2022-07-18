@@ -1,6 +1,7 @@
 import { ProfilePic } from '../Profile/Profile';
 import { CommentButton, FollowLink, Icon, LikeButton } from '../Icons';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 export function YourProfile({ username }) {

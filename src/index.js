@@ -15,7 +15,7 @@ root.render(
       <Navbar/> {/* Render navbar on all pages */}
 
       <Routes>
-          <Route exact={true} path='' element={ <HomePage/> }/>
+          <Route path='' element={ <HomePage/> }/>
           <Route path=':username' element={ <PostsPage /> }/>
           <Route path=':username/saved' element={ <SavedPage /> } />
           <Route path=':username/tagged' element={ <TaggedPage /> } />
