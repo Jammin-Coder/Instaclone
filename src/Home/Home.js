@@ -8,7 +8,7 @@ export function YourProfile({ username }) {
         <div className='grid place-content-center [grid-template-columns:20%_60%_20%] text-sm mb-5'>
             <ProfilePic width={48} src={ `https://jammincoder.github.io/Instaclone/img/profile/${ username }.jpg` }/>
             <div className='ml-2'>
-                <a className='user-link' href={ `${ username }` }>{ username }</a>
+                <Link className='user-link' to={ `${ username }` }>{ username }</Link>
                 <small className='text-gray-600'>Tim Batt</small>
             </div>
             <a className='user-link grid place-items-center text-blue-500 font-bold' href='/switch_profile'>Switch</a>
@@ -21,7 +21,7 @@ export function UserSuggestion({ username }) {
         <div className='my-3 grid place-content-center [grid-template-columns:20%_50%_30%] text-sm'>
             <ProfilePic width='40px' src={ `https://jammincoder.github.io/Instaclone/img/profile/${ username }.jpg` }/>
             <div className='place-content-start ml-2'>
-                <a className='user-link' href={ `/${ username }` }>{ username }</a>
+                <Link className='user-link' to={ `${ username }` }>{ username }</Link>
                 <small className='text-gray-600'>Followed by...</small>
                 
             </div>
@@ -47,7 +47,7 @@ export function PostInfo(props) {
 export function Comment(props) {
     return (
         <div>
-            <a className='hover:underline font-bold mr-2' href={ `/${ props.username }` }> { props.username } </a>
+            <Link className='hover:underline font-bold mr-2' to={ `${ props.username }` }> { props.username } </Link>
             <p className='inline'>{ props.children }</p>
         </div>
     );
