@@ -7,7 +7,7 @@ let defaultSize = 24 + 'px';
 export function Message(props) {
     let size;
     props.size ? size = props.size + 'px': size = defaultSize;
-    return <a className='Navbar__link' href='/messages'>
+    return <a className='Navbar__link' href='/Instaclone/messages'>
         <img src={message} style={{width: size, height: size }} onClick={ props.onClick }/>
     </a>
 }
@@ -15,7 +15,7 @@ export function Message(props) {
 export function Home(props) {
     let size;
     props.size ? size = props.size + 'px': size = defaultSize;
-    return <a className='Navbar__link' href='/'>
+    return <a className='Navbar__link' href='/Instaclone/'>
         <img src={home} style={{width: size, height: size }}/>
     </a>
 }
@@ -23,7 +23,7 @@ export function Home(props) {
 export function New(props) {
     let size;
     props.size ? size = props.size + 'px': size = defaultSize;
-    return <a className='Navbar__link' href='/'>
+    return <a className='Navbar__link' href='/Instaclone/'>
         <img src={newPost} style={{width: size, height: size }}/>
     </a>
 }
