@@ -1,4 +1,4 @@
-import { Outlet, useLocation, useParams } from 'react-router-dom';
+import { Outlet, useLocation, useParams, Link } from 'react-router-dom';
 
 export function ProfilePic(props) {
     let source;
@@ -62,11 +62,11 @@ export function ProfileSectionLink(props) {
     const location = useLocation();
     let style;
 
-    if (props.href == location.pathname) style = {borderTop: '1px solid black', color: 'black'}
+    if (props.to == location.pathname) style = {borderTop: '1px solid black', color: 'black'}
     return (
-        <a className='profile-section-link' style={ style } href={ props.href }>
+        <Link className='profile-section-link' style={ style } to={ props.to }>
             { props.children }
-        </a>
+        </Link>
     );
 }
 
@@ -75,9 +75,9 @@ export function ProfileNav(props) {
     return (
         <div className='ProfileNav flex justify-center mb-10 border-t border-t-gray-200'>
             <div className='flex gap-4'>
-                <ProfileSectionLink href={`/${username}`}>Posts</ProfileSectionLink>
-                <ProfileSectionLink href={`/${username}/saved`}>Saved</ProfileSectionLink>
-                <ProfileSectionLink href={`/${username}/tagged`}>Tagged</ProfileSectionLink>
+                <ProfileSectionLink to={`/${username}`}>Posts</ProfileSectionLink>
+                <ProfileSectionLink to={`/${username}/saved`}>Saved</ProfileSectionLink>
+                <ProfileSectionLink to={`/${username}/tagged`}>Tagged</ProfileSectionLink>
             </div>
         </div>
     );
