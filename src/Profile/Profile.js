@@ -87,7 +87,7 @@ export function ProfileNav(props) {
 export function Posts(props) {
     return (
         <div className='Posts grid grid-cols-3 gap-1'>
-            <img src='https://jammincoder.github.io/Instaclone/img/posts/panda.png' className='aspect-square border border-gray-700'/>
+            <img src='https://jammincoder.github.io/Instaclone/img/posts/livefreeguitars.png' className='aspect-square border border-gray-700'/>
             <img src='https://jammincoder.github.io/Instaclone/img/posts/panda.png' className='aspect-square border border-gray-700'/>
             <img src='https://jammincoder.github.io/Instaclone/img/posts/panda.png' className='aspect-square border border-gray-700'/>
             <img src='https://jammincoder.github.io/Instaclone/img/posts/panda.png' className='aspect-square border border-gray-700'/>
